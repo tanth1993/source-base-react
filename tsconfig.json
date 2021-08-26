@@ -10,13 +10,13 @@
     "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
     "strict": true, /* Enable all strict type-checking options. */
     "skipLibCheck": true, /* Skip type checking of declaration files. */
+    "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
     "paths": {
       "@dev/*": [
         "src/*"
       ],
     }, /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "sourceMap": true, /* Generates corresponding '.map' file. */
-    "baseUrl": "./", /* Base directory to resolve non-absolute module names. */
     "typeRoots": [
       "./src/@types",
       "./node_modules/@types"
@@ -26,7 +26,7 @@
       "es2015",
       "es2017"
     ], /* Specify library files to be included in the compilation. */
-    // "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     // "declaration": true,                         /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "outFile": "./",                             /* Concatenate and emit output to single file. */
