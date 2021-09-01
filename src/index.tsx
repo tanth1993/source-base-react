@@ -11,6 +11,16 @@ if (!link) {
 }
 link.href = logo;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function renderApp(Component: React.ReactElement) {
+    ReactDOM.render(Component, document.getElementById('root'));
+}
 
+renderApp(<App />);
+
+// Allow Hot Module Replacement
+if (module.hot) {
+    module.hot.accept('./App', () => {
+        renderApp(<App />);
+    })
+}
 
