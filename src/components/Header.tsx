@@ -4,25 +4,25 @@ interface IHeader {
     name?: string
 }
 export const Header: React.FC<IHeader> = props => {
+    const [numb, setState] = React.useState<number>(0)
+
     const { name } = props
     const render = () => {
-        // function forNow() {
-        //     for (let i = 0; i < 1000; i++) {
-        //         console.log('11')
-        //     }
-        // }
-        // forNow()
-        return <div className="">{name || 'Header'}</div>
+        return <div className="">
+            <h2>{name || 'Header'}</h2>
+            <h4>{numb}</h4>
+        </div>
     }
+
     const onClick = () => {
-
         console.log(process.env.ENVIRONMENT)
-        console.log('new h')
     }
 
-    return <div className="" style={{ padding: 50 }}>
+    return <div className="" style={{ padding: 150 }}>
         {render()}
 
-        <button onClick={onClick}> CLick</button>
+        <button onClick={() => setState(numb + 1)}> ++++++ </button>
+        <br />
+        <button onClick={() => setState(numb - 1)}> --------- </button>
     </div>
 }

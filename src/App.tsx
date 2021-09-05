@@ -1,21 +1,26 @@
-import logo from './logo.svg';
-import * as React from 'react'
 import './App.css';
+import logo from './logo.svg';
+import { hot } from 'react-hot-loader/root';
+import * as React from 'react'
 import { Header } from './components/Header'
 
 function App() {
+  React.useEffect(() => {
+    console.log('useEffect still works')
+
+  }, [])
   return (
     <div className="App">
       <header className="App-header" style={{ padding: 50 }}>
         <img src={logo} className="App-logo" alt="logo" width="120" />
         <p>
-          Edit <code>src/App...js</code> and save to reload.!!!!!!!!!
+          Edit <code>src/App...js</code> and save to reload.!
         </p>
         <a
           className="App-link"
           href="#"
         >
-          source-base-reactwqeqwe
+          source-base-react
         </a>
       </header>
       <Header
@@ -25,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(App);
